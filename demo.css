@@ -1,0 +1,207 @@
+
+*
+{
+	margin: 0;
+	padding: 0;
+}	
+
+.Progress_Bar
+{
+height: 100vh;
+width: 100%;
+background-image: url(sky.jpg);
+background-position: center;
+background-size: cover;
+position: relative;
+overflow-x: hidden;
+
+	
+}
+
+.city
+{
+	height: 250px;
+	width: 500%;
+    background-image: url(city.png);
+    position: absolute;
+    bottom: 200px;
+
+ 
+    animation: city 15s linear infinite;
+    background-repeat: repeat-x;
+}
+@keyframes city
+{
+
+	100%{
+		transform: translateX(-100px);
+	}
+}
+
+.highway
+{
+    height: 200px;
+	width: 500%;
+    background-image: url(road.jpg);
+    position: absolute;
+    bottom:0;
+    animation: highway 9s linear infinite;
+    background-repeat: repeat-x;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+}
+@keyframes highway
+{
+	100%{
+		transform: translateX(-3400px);
+	}
+
+}
+
+.car
+{
+	width: 400px;
+	left: 30%;
+	bottom: 120px;
+	transform: translateX(-50%);
+    position: absolute;  
+    z-index: 2
+    
+ }
+
+
+ 
+ .car img
+ {
+
+ 	width:100%;
+ 	animation: car 1s linear infinite;
+ }
+
+ @keyframes car
+ {
+ 	100%{
+		transform: translateY(-1px);
+	}
+	50%{
+		transform: translateY(1px);
+	}
+	0%{
+		transform: translateY(-1px);
+	}
+}
+
+.wheel_left
+{
+
+	width: 400px;
+	left: 38.7%;
+	bottom: 123px;
+	transform: translateX(-50%);
+    position: absolute;  
+    z-index: 2
+    
+}
+.wheel_left img
+{
+
+	width:18%;
+	height: 18%;
+	animation: wheel_left 1s linear infinite;
+	animation:wheel_rotate 1s linear infinite; 
+}
+
+
+ @keyframes wheel_left
+ {
+ 	
+	
+ 	100%{
+		transform: translateY(-1px);
+		transform: rotate(360deg);
+			}
+
+	70%{
+		transform: translateY(1px);
+		transform: rotate(360deg);
+	}
+	0%{
+		transform: translateY(-1px);
+		transform: rotate(360deg);
+	}
+}
+@keyframes wheel_rotate
+{
+	from{
+
+	transform: rotate(0deg);
+	    }
+
+to{
+		transform: rotate(360deg);
+	
+
+}
+}
+
+
+.wheel_right
+{
+
+	width: 400px;
+	left: 100.1%;
+	bottom: 123px;
+	transform: translateX(-50%);
+    position: absolute;  
+    z-index: 2
+    
+}
+.wheel_right img
+{
+
+	width:18%;
+	height: 18%;
+	animation: wheel_left 1s linear infinite;
+	animation:wheel_rotate 1s linear infinite; 
+
+
+}
+
+
+
+.whole_car 
+{ 
+	width: 400px;
+	bottom: 30px;
+    position: absolute;  
+    z-index: 2;
+  animation: mymove 300s linear infinite;
+}
+
+@keyframes mymove 
+{
+ 
+ 100%
+ {
+ 	transform: translateX(2400px);
+ }
+}
+
+.line
+{
+  width: 100px;
+  height: 100px;
+  bottom: 0px;
+  background-color: green;
+  animation: example 4s linear infinite;
+}
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+
+
+	
